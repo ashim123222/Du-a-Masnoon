@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Islamic</title>
+
+    <!-- style link  -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/contain.css" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alyamama:wght@300..900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Asul:wght@400;700&family=Iceberg&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Leckerli+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Naskh+Arabic:wght@400..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="align-center">
+      <div class="align-center">
+        <div class="menu click" id="menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <b class="logo">Islamic</b>
+      </div>
+      <div class="align-center search-container">
+        <input
+          class="search-input"
+          type="search"
+          placeholder="Search for dua's and sunnat"
+          id="search"
+        />
+        <label class="search-btn click" for="search">
+          <svg
+            height="200px"
+            width="200px"
+            version="1.1"
+            id="_x32_"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="-76.8 -76.8 665.60 665.60"
+            xml:space="preserve"
+            fill="var(text-pri)"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <style type="text/css">
+                .st0 {
+                  fill: var(--text-pri);
+                }
+              </style>
+              <g>
+                <path
+                  class="st0"
+                  d="M312.069,53.445c-71.26-71.26-187.194-71.26-258.454,0c-71.261,71.26-71.261,187.206,0,258.466 c71.26,71.26,187.194,71.26,258.454,0S383.329,124.705,312.069,53.445z M286.694,286.536 c-57.351,57.34-150.353,57.34-207.704-0.011s-57.351-150.353,0-207.693c57.351-57.351,150.342-57.351,207.693,0 S344.045,229.174,286.694,286.536z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M101.911,112.531c-29.357,37.725-31.801,89.631-7.321,129.702c1.877,3.087,5.902,4.048,8.978,2.182 c3.065-1.888,4.037-5.903,2.16-8.978c-21.666-35.456-19.506-81.538,6.469-114.876c2.226-2.837,1.713-6.938-1.135-9.154 C108.227,109.193,104.125,109.695,101.911,112.531z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M498.544,447.722l-132.637-129.2c-7.255-7.07-18.84-6.982-26.008,0.174l-21.033,21.033 c-7.156,7.156-7.234,18.742-0.153,25.986l129.19,132.636c14.346,17.324,35.542,18.35,51.917,1.964 C516.216,483.951,515.857,462.068,498.544,447.722z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </label>
+        <div id="search-results"></div>
+      </div>
+      <div class="align-center">
+        <a href="" class="click-link contact">Contact Us</a>
+        <div class="mode-change click">
+          <svg
+            viewBox="-3.6 -3.6 31.20 31.20"
+            fill="var(--text-pri)"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M21.0672 11.8568L20.4253 11.469L21.0672 11.8568ZM12.1432 2.93276L11.7553 2.29085V2.29085L12.1432 2.93276ZM7.37554 20.013C7.017 19.8056 6.5582 19.9281 6.3508 20.2866C6.14339 20.6452 6.26591 21.104 6.62446 21.3114L7.37554 20.013ZM2.68862 17.3755C2.89602 17.7341 3.35482 17.8566 3.71337 17.6492C4.07191 17.4418 4.19443 16.983 3.98703 16.6245L2.68862 17.3755ZM21.25 12C21.25 17.1086 17.1086 21.25 12 21.25V22.75C17.9371 22.75 22.75 17.9371 22.75 12H21.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75V1.25C6.06294 1.25 1.25 6.06294 1.25 12H2.75ZM15.5 14.25C12.3244 14.25 9.75 11.6756 9.75 8.5H8.25C8.25 12.5041 11.4959 15.75 15.5 15.75V14.25ZM20.4253 11.469C19.4172 13.1373 17.5882 14.25 15.5 14.25V15.75C18.1349 15.75 20.4407 14.3439 21.7092 12.2447L20.4253 11.469ZM9.75 8.5C9.75 6.41182 10.8627 4.5828 12.531 3.57467L11.7553 2.29085C9.65609 3.5593 8.25 5.86509 8.25 8.5H9.75ZM12 2.75C11.9115 2.75 11.8077 2.71008 11.7324 2.63168C11.6686 2.56527 11.6538 2.50244 11.6503 2.47703C11.6461 2.44587 11.6482 2.35557 11.7553 2.29085L12.531 3.57467C13.0342 3.27065 13.196 2.71398 13.1368 2.27627C13.0754 1.82126 12.7166 1.25 12 1.25V2.75ZM21.7092 12.2447C21.6444 12.3518 21.5541 12.3539 21.523 12.3497C21.4976 12.3462 21.4347 12.3314 21.3683 12.2676C21.2899 12.1923 21.25 12.0885 21.25 12H22.75C22.75 11.2834 22.1787 10.9246 21.7237 10.8632C21.286 10.804 20.7293 10.9658 20.4253 11.469L21.7092 12.2447ZM12 21.25C10.3139 21.25 8.73533 20.7996 7.37554 20.013L6.62446 21.3114C8.2064 22.2265 10.0432 22.75 12 22.75V21.25ZM3.98703 16.6245C3.20043 15.2647 2.75 13.6861 2.75 12H1.25C1.25 13.9568 1.77351 15.7936 2.68862 17.3755L3.98703 16.6245Z"
+                fill="var(--text-pri)"
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="sidebar hide change">
+        <div class="top">
+          <b>Islamic</b>
+        </div>
+
+        <div class="middle">
+          <div>
+            <h3>
+              Chabagi Matangda
+              <i class="dropdown chaba-btn fa-solid fa-angle-down"></i>
+            </h3>
+            <div class="gap chaba">
+              <h5>Du'a</h5>
+              <a href="#chak-uba">Chak Ubagi Du'a</a>
+              <a href="#chaba-houba">Chaba houbagi du'a</a>
+              <a href="#houbagi-kaormba">houbagi du'a kaormlabadi </a>
+              <a href="#marak-marak">Marak marakki du'a</a>
+              <a href="#chaba-loiba">chaba loibagi du'a</a>
+              <a href="#dawat-chaba">dawat chaba loibagi du'a</a>
+              <a href="#chaba-hisaab">hisaab loudanaba du'a</a>
+              <h5>Sunnat & Adaab</h5>
+              <a href="#chaba-sunnat">Chabagi Sunnatsing</a>
+              <a href="#chaba-adaab">chabagi adaabsing</a>
+            </div>
+          </div>
+
+          <div>
+            <h3>
+              Ising Thakpagi
+              <i class="dropdown tumba-btn fa-solid fa-angle-down"></i>
+            </h3>
+            <div class="chaba gap">
+              <h5>Du'a</h5>
+              <a href="#thakpa-dua">Thakpagi Du'a</a>
+              <a href="#thakpa-loiba">thakpa loibagi du'a</a>
+              <a href="#thakpa-hisaab">hisaab loudanaba du'a</a>
+              <h5>Sunnat & Adaab</h5>
+              <a href="#thakpa-sunnat">Thakpagi Sunnatsing</a>
+            </div>
+          </div>
+
+          <div>
+            <h3>
+              Tumbagi Matangda
+              <i class="dropdown tumba-btn fa-solid fa-angle-down"></i>
+            </h3>
+            <div class="gap tumba">
+              <h5>Du'a</h5>
+              <a href="#tumba-dua">Tumba houbagi Du'a</a>
+              <a href="#akiba-mang">akiba mang manglabadi</a>
+              <a href="#tumba-hougtpa">tumba hougtpagi du'a</a>
+              <h5>Sunnat & Adaab</h5>
+              <a href="#tumba-sunnat">Tumbagi Sunnatsing</a>
+              <a href="#tumba-hougatpa-sunnat">Tumba Hougatpagi Sunnatsing</a>
+              <a href="#tumba-adaab">tumbagi adaabsing</a>
+            </div>
+          </div>
+
+          <div>
+            <h3>
+              Toilet Ki Matangda
+              <i class="dropdown toilet-btn fa-solid fa-angle-down"></i>
+            </h3>
+            <div class="gap toilet">
+              <h5>Du'a</h5>
+              <a href="#toilet-changba">Toilet changbagi Du'a</a>
+              <a href="#toilet-thoklakpa">toilet thoklkpagi du'a</a>
+              <h5>Sunnat</h5>
+              <a href="#toilet-sunnat">Toilet Ki Sunnatsing</a>
+              <a href="#toilet-adaab">Toilet ki adaabsing</a>
+            </div>
+          </div>
+
+          <div>
+            <h3>
+              Masjid Ki Matangda
+              <i class="dropdown masjid-btn fa-solid fa-angle-down"></i>
+            </h3>
+            <div class="gap masjid">
+              <h5>Du'a</h5>
+              <a href="#masjid-changba">Masjid changbagi Du'a</a>
+              <a href="#masjid-durood">durood sharif</a>
+              <a href="#masjid-etikaaf">etikaaf niyyat</a>
+              <a href="#masjid-thoklkpa">Masjid thoklakpagi du'a</a>
+              <a href="#masjid-dari">masjid tagi laakpagi</a>
+              <h5>Sunnat & adaab</h5>
+              <a href="#masjid-changba-sunnat">Masjid Chnagbagi Sunnat</a>
+              <a href="#masjid-thokpa-sunnat">Masjid Thokpagi Sunnat</a>
+              <a href="#masjid-adaab">masjidki adaabsing</a>
+            </div>
+          </div>
+
+          <div>
+            <h3>
+              Namazgi Matangda
+              <i class="dropdown namaz-btn fa-solid fa-angle-down"></i>
+            </h3>
+            <div class="namaz gap">
+              <h5>Farz</h5>
+              <a href="#namaz-farz-mn">Namazgi manunggi Farz</a>
+              <a href="#namaz-farz-mp">namazgi mapan-gi farz</a>
+              <h5>Wazib</h5>
+              <a href="#namaz-wajib">namazgi wazibsing</a>
+              <h5>Sunnat</h5>
+              <a href="#namaz-sunnat">namzgi sunnatsing</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <main class="main-container">
+        <section class="dua">
+          <h3 class="reveal">Chabagi Du'asing</h3>
+          <div id="chak-uba">
+            <h4 class="reveal">Chak Ubagi Du'a</h4>
+            <!-- <div id="toast" class="reveal">Dua copied successfully</div> -->
+            <p class="arabic reveal">
+              اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا وَقِنَا عَذَابَ
+              النَّارِ
+            </p>
+            <div class="btns reveal">
+              <button class="copy"><i class="fa-regular fa-copy"></i></button>
+              <button class="sound">
+                <i class="fa-solid fa-volume-low"></i>
+              </button>
+            </div>
+            <p class="meaning reveal">
+              <i></i> "Ya Allah, nahakna eikhoida pibiribasing asida barkat
+              pinabiyu, Amasung eikhoibu meigi azabtagi kanbiyu".
+            </p>
+          </div>
+          <div id="chaba-houba">
+            <h4 class="reveal">Chak Chaba Houbagi Dua</h4>
+            <p class="arabic reveal">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+            <div class="btns reveal">
+              <button class="copy"><i class="fa-regular fa-copy"></i></button>
+              <button class="sound">
+                <i class="fa-solid fa-volume-low"></i>
+              </button>
+            </div>
+            <p class="meaning reveal">
+              <i></i> "Houjari Allah gi mingda, yamna thoujal heiba amasung
+              minungsi chaoba mapuni".
+            </p>
+          </div>
+          <div id="houbagi-kaormba" class="reveal">
+            <h4 class="reveal">Houbagi Du'a Kaoramlabadi</h4>
+            <p class="arabic reveal">بِسْمِ اللَّهِ أَوَّلَهُ وَآخِرَهُ</p>
+            <div class="btns reveal">
+              <button class="copy"><i class="fa-regular fa-copy"></i></button>
+              <button class="sound">
+                <i class="fa-solid fa-volume-low"></i>
+              </button>
+            </div>
+            <p class="meaning reveal">
+              <i></i> "Ahouba amadi aroibada Allahgi mingga loinana chajari".
+            </p>
+          </div>
+          <div id="marak-marak" class="reveal">
+            <h4 class="reveal">Marak Marakta Son-gadaba</h4>
+            <p class="arabic reveal">
+              اَللَّهُمَّ لَكَ الْحَمْدُ وَلَكَ الشُّكْرُ
+            </p>
+            <div class="btns reveal">
+              <button class="copy"><i class="fa-regular fa-copy"></i></button>
+              <button class="sound">
+                <i class="fa-solid fa-volume-low"></i>
+              </button>
+            </div>
+            <p class="meaning reveal">
+              <i></i> "Ya Allah, thagatchariba matik magun khudingmk nahak
+              khktagini, amasung thagatpagi matik chabasu nahak khaktani".
+            </p>
+          </div>
+          <div id="chaba-loiba" class="reveal">
+            <h4 class="reveal">Chaba Loibada Son-gadaba Du'a</h4>
+            <p class="arabic reveal">
+              الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مِنَ
+              الْمُسْلِمِينَ
+            </p>
+            <div class="btns reveal">
+              <button class="copy"><i class="fa-regular fa-copy"></i></button>
+              <button class="sound">
+                <i class="fa-solid fa-volume-low"></i>
+              </button>
+            </div>
+            <p class="meaning reveal">
+              <i></i> "Thagatchariba khudingmk Allah khaktagini, mahakna
+              eikhoibu pijabire pithakpire amasung Musalman oihnbire".
+            </p>
+          </div>
+          <div id="dawat-chaba" class="reveal">
+            <h4>Dawat Chaba Loibagi Du'a</h4>
+            <p class="arabic">
+              اللَّهُمَّ اطْعِمَّ مَنْ اطْعَمَنِي وَاسْقِِِ ِ مَنْ سَقَانِيِ
+            </p>
+            <div class="btns reveal">
+              <button class="copy"><i class="fa-regular fa-copy"></i></button>
+              <button class="sound">
+                <i class="fa-solid fa-volume-low"></i>
+              </button>
+            </div>
+            <p class="meaning reveal">
+              <i></i> "Ya Allah, Nahakna eibu pijabiriba amasung eibu
+              pithakpiriba mahakpusu nahakna pijabiyu amasung pithakpiyu".
+            </p>
+          </div>
+          <div id="chaba-hisaab" class="reveal">
+            <h4 class="reveal">Chabada Hisaab Loudanaba Du'a</h4>
+            <p class="arabic reveal">
+              الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا هَذَا وَرَزَقَنَاهُ مِنْ
+              غَيْرِ حَوْلٍ مِنَّا وَلَا قُوَّةٍ
+            </p>
+            <div class="btns reveal">
+              <button class="copy"><i class="fa-regular fa-copy"></i></button>
+              <button class="sound">
+                <i class="fa-solid fa-volume-low"></i>
+              </button>
+            </div>
+            <p class="meaning reveal">
+              <i></i> "Thagatchariba matik magun khudingmk Allahgini, mahakna
+              eikhoibu chinjak pijabiri amasung rijq pinabiri, Eikhoigi pang-gal
+              amadi shakti amata yaodana".
+            </p>
+          </div>
+        </section>
+
+        <section class="sunnat">
+          <h3 class="reveal">Chabagi Sunnat & Adaab</h3>
+          <div id="chaba-sunnat" class="list">
+            <h4 class="reveal">Chabagi Sunnatsing</h4>
+            <ol>
+              <li class="reveal">
+                Khut animak khujeng faoba sengna hamdokpa, Atoppa fi amada
+                tethoktaba.
+              </li>
+              <li class="reveal">Dastarkhwan tharaga chaba.</li>
+              <li class="reveal">
+                Khufm ahumgi manungdagi amada fammaga chaba.
+              </li>
+              <li class="reveal">Chak chaba houbagi du'a sonba.</li>
+              <li class="reveal">Yetki khutna chaba.</li>
+              <li class="reveal">Khutsa ahumna chaba.</li>
+              <li class="reveal">Esagi maangdagi chaba.</li>
+              <li class="reveal">Yamna saba pot chadaba.</li>
+              <li class="reveal">Ngara souraga chadaba.</li>
+              <li class="reveal">Chanaba pot takhrabadi khunggatlaga chaba</li>
+              <li class="reveal">Chanaba potpu haote haidaba.</li>
+              <li class="reveal">
+                Charaba matung khutsasing sengna lekthokpa.
+              </li>
+              <li class="reveal">Chanaba pukhamda khut haamjindaba.</li>
+              <li class="reveal">Chaba loibagi du'a sonba.</li>
+            </ol>
+          </div>
+          <div id="chaba-adaab" class="list">
+            <h4 class="reveal">Chabagi Adaabsing</h4>
+            <ol>
+              <li class="reveal">
+                Nabigi tariqa ga loinana chanaba hotnagani.
+              </li>
+              <li class="reveal">
+                Chabadagi fanglakpa panggal aduna Allahgi Ibadat toubada
+                sijinnage haayna khn-gani.
+              </li>
+              <li class="reveal">Kok khumlaga chagani.</li>
+              <li class="reveal">
+                Khut animak khujengfaoba sengna haamdokkani, atoppa fi amafaoda
+                teithokloi.
+              </li>
+              <li class="reveal">Dastarkhwan tharaga chagani.</li>
+              <li class="reveal">Khong-up / Chappal louthoklaga chagani.</li>
+              <li class="reveal">
+                Chak Ubagi dua Songani
+                <p class="dua">
+                  اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا وَقِنَا عَذَابَ
+                  النَّارِ
+                </p>
+              </li>
+              <li class="reveal">
+                kKhufam ahumgi manungda amada fmlaga chagani.
+                <ol>
+                  <li class="reveal">
+                    Khong naamma feitharaga namma yungkhtlaga fmlaga chaba.
+                  </li>
+                  <li class="reveal">Namazgi khufmda fmlaga chaba.</li>
+                  <li class="reveal">Ninggaang fmlaga chaba.</li>
+                </ol>
+              </li>
+              <li class="reveal">Mee ani nattraga henna tinnaraga chagani.</li>
+              <li class="reveal">Chaba houbagi du'a son-gani.</li>
+              <li class="reveal">
+                Yetki khutna chagani, Khutsa ahumna chanaba hotnagani.
+              </li>
+              <li class="reveal">
+                Isagi maangdagi chagani, Mathel yaamlabadi houningba amadagi
+                hekta houba yaay.
+              </li>
+              <li class="reveal">
+                Chaminnari mee aduda henna pijakhinaba hotnagani.
+              </li>
+              <li class="reveal"></li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="dua">
+          <h3 class="reveal">Thakpagi Du'asing</h3>
+          <div id="thakpa-dua">
+            <h4 class="reveal">Thakpa Houbagi Du'a</h4>
+            <p class="arabic reveal">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+            <div class="btns reveal">
+              <button class="copy"><i class="fa-regular fa-copy"></i></button>
+              <button class="sound">
+                <i class="fa-solid fa-volume-low"></i>
+              </button>
+            </div>
+            <p class="meaning reveal">
+              <i></i> "Houjari Allah gi mingda, yamna thoujal heiba amasung
+              minungsi chaoba mapuni".
+            </p>
+          </div>
+          <div id="thakpa-loiba">
+            <h4 class="reveal">Thakpa Loibagi Du'a</h4>
+            <p class="arabic reveal">ٱلْحَمْدُ لِلَّٰهِ</p>
+            <div class="btns reveal">
+              <button class="copy"><i class="fa-regular fa-copy"></i></button>
+              <button class="sound">
+                <i class="fa-solid fa-volume-low"></i>
+              </button>
+            </div>
+            <p class="meaning reveal">
+              <i></i> "Thagatchari matik magun khudingmak Allah khaktagini".
+            </p>
+          </div>
+          <div id="thakpa-hisaab" class="reveal">
+            <h4 class="reveal">Thakpada Hisaab Loudanaba Du'a</h4>
+            <p class="arabic reveal">
+              الْحَمْدُ لِلَّهِ الَّذِي سَقَانَا عَذْبًا فُرَاتًا بِرَحْمَتِهِ
+              وَلَمْ يَجْعَلْهُ مِلْحًا أُجَاجًا بِذُنُوبِنَا
+            </p>
+            <div class="btns reveal">
+              <button class="copy"><i class="fa-regular fa-copy"></i></button>
+              <button class="sound">
+                <i class="fa-solid fa-volume-low"></i>
+              </button>
+            </div>
+            <p class="meaning reveal">
+              <i></i> "Thagatchariba matik magun khudingmak Allah khaktagini,
+              mahakki rahmatna eikhoibu athumba amadi asengba ising pithkpire,
+              amasung eikhoigi gunah na marm oiraga masibu akhaba amadi ayakpa
+              oihnbide".
+            </p>
+          </div>
+        </section>
+
+        <section class="sunnat">
+          <h3 class="reveal">Thakpagi Sunnatsing</h3>
+          <div id="thakpa-sunnat" class="list">
+            <h4 class="reveal">Thakpagi sunnat</h4>
+            <ol>
+              <li class="reveal">Yetki khutna pairaga thakpa.</li>
+              <li class="reveal">Famlaga thakpa.</li>
+              <li class="reveal">Yenglaga thakpa.</li>
+              <li class="reveal">Bismillah sollaga thakpa.</li>
+              <li class="reveal">Ningsa ahumda thakpa.</li>
+              <li class="reveal">Thaklaba matungda Alhamdulillah sonba.</li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="dua">
+          <h3 class="reveal">Tumbagi Du'asing</h3>
+          <div id="tumba-dua">
+            <h4 class="reveal">Tumbagi Du'a</h4>
+            <p class="arabic reveal">اللَّهُمَّ بِاسْمِكَ أَمُوتُ وَأَحْيَا</p>
+            <div class="btns reveal">
+              <button class="copy"><i class="fa-regular fa-copy"></i></button>
+              <button class="sound">
+                <i class="fa-solid fa-volume-low"></i>
+              </button>
+            </div>
+            <p class="meaning reveal">
+              <i></i> "Ya Allah, nahakki mingga loinana sijari amasung
+              hingjari".
+            </p>
+          </div>
+          <div id="akiba-mang" class="reveal">
+            <h4 class="reveal">Akiba Mang Mangbagi Du'a</h4>
+            <p class="arabic reveal">
+              سُبْحَانَ اللّٰهِ وَالْحَمْدُ لِلّٰهِ وَلَا إِلٰهَ إِلَّا اللّٰهُ
+              وَاللّٰهُ أَكْبَرُ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللّٰهِ
+              الْعَلِيِّ الْعَظِيمِ
+            </p>
+            <div class="btns reveal">
+              <button class="copy"><i class="fa-regular fa-copy"></i></button>
+              <button class="sound">
+                <i class="fa-solid fa-volume-low"></i>
+              </button>
+            </div>
+            <p class="meaning reveal">
+              <i></i> "Allahdi amakpa khudingmktagi senggi, Amasung
+              thagatchariba matik magun khudingmk allahkhktagini, amasung
+              laatpada matik chaba allah khktani, amasung Allah di pumnamaktagi
+              chaowee, ".
+            </p>
+          </div>
+          <div class="gap reveal">
+            <h4 class="reveal">Akiba Mang Manglabadi Kari Tougani</h4>
+            <div class="list">
+              <ol>
+                <li class="reveal">
+                  Oirom nakanda tin yaohndana ahumlak sittok-kani.
+                </li>
+                <li class="reveal">
+                  Allah da sheitaan dagi kanbinaba haayjagani.
+                </li>
+                <li class="reveal">
+                  Akiba / fattaba mang adugi matangda kanadasu haayroi.
+                </li>
+                <li class="reveal">
+                  Hiplamliba nakal adudagi onthoklaga atoppa nakl do ollaga
+                  hipkani
+                </li>
+                <li class="reveal">
+                  Ngamlabadi hougtlaga nafl namaz raka'at ani son-gani.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div id="tumba-hougtpa" class="reveal">
+            <h4 class="reveal">Tumba Hougatpagi Du'a</h4>
+            <p class="arabic reveal">
+              الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا
+              وَإِلَيْهِ النُّشُورُ
+            </p>
+            <div class="btns reveal">
+              <button class="copy"><i class="fa-regular fa-copy"></i></button>
+              <button class="sound">
+                <i class="fa-solid fa-volume-low"></i>
+              </button>
+            </div>
+            <p class="meaning reveal">
+              <i></i> "Thagatchariba matik magun khudingmk Allah khaktagina,
+              mahakna eikhoibu siruraba matungda amuk hinghnbire, amasung eikhoi
+              khudingmk mahakki maikeida amuk hallagadabani".
+            </p>
+          </div>
+        </section>
+
+        <section class="sunnat">
+          <h3 class="reveal">Tumbagi Sunnat & Adaab</h3>
+          <div id="tumba-sunnat" class="list">
+            <h4 class="reveal">Tumbagi Sunnatsing</h4>
+            <ol>
+              <li class="reveal">
+                Esha Namaz matungda yaamna thuna tumnaba hotnaba., duniyagi wari
+                wataida matam lenthoktaba.
+              </li>
+              <li class="reveal">Fi hongdoklaga tumba</li>
+              <li class="reveal">Wudu yaona tumba</li>
+              <li class="reveal">
+                Famung nattraga maitha adu ahumlak knthokpa
+              </li>
+              <li class="reveal">Surma ahumlak haaplaga tumba</li>
+              <li class="reveal">
+                Istigfar ahumlak sonba
+                <p class="dua reveal">
+                  أَسْتَغْفِرُ اللهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ
+                  الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ
+                </p>
+              </li>
+
+              <li class="reveal">
+                Fatima tashbih chatpa,
+                <ul>
+                  <li class="reveal">
+                    Subhanallah 33 rak <span class="dua">سُبْحَانَ اللهِ</span>
+                  </li>
+                  <li class="reveal">
+                    Alhamdulillah 33 rak
+                    <span class="dua">ٱلْحَمْدُ لِلَّٰهِ</span>
+                  </li>
+                  <li class="reveal">
+                    Allahu-Akbar 34 rak <span class="dua">اللّٰهُ أَكْبَر</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="reveal">Qul 4 sonba.</li>
+              <li class="reveal">
+                Yetlomda cheplaga qiblahgi maikeida may ollaga tumba.
+              </li>
+              <li class="reveal">Uplaga tumdaba.</li>
+              <li class="reveal">
+                Tumbagi du'a sonba
+                <p class="dua reveal">اللَّهُمَّ بِاسْمِكَ أَمُوتُ وَأَحْيَا</p>
+              </li>
+            </ol>
+          </div>
+          <div id="tumba-hougatpa-sunnat" class="reveal">
+            <h4 class="reveal">Tumba Hougatpa gi Sunnat</h4>
+            <div class="list">
+              <ol>
+                <li class="reveal">Tumba hougtpagi du'a sonba.</li>
+                <li class="reveal">
+                  Khut ki amonba asina mai amadi mitta tapna noiba.
+                </li>
+                <li class="reveal">Miswak twba</li>
+              </ol>
+            </div>
+          </div>
+          <div id="tumba-adaab" class="reveal">
+            <h4 class="reveal">Tumbagi Adaabsing</h4>
+          </div>
+        </section>
+
+        <section class="dua">
+          <h3 class="reveal">Toiletki Du'asing</h3>
+          <div id="toilet-changba">
+            <h4 class="reveal">Toilet Changbagi Du'a</h4>
+            <p class="arabic reveal">
+              بِسْمِ اللهِ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ
+              وَالْخَبَائِثِ
+            </p>
+            <div class="btns reveal">
+              <button class="copy"><i class="fa-regular fa-copy"></i></button>
+              <button class="sound">
+                <i class="fa-solid fa-volume-low"></i>
+              </button>
+            </div>
+            <p class="meaning reveal">
+              <i></i> "Allahgi mingga loinana changlibani, Ya Allah! eihakpu
+              fattaba jinn nupi amasung nupa dagi kanbinaba haijari.".
+            </p>
+          </div>
+          <div id="toilet-thoklakpa">
+            <h4 class="reveal">Toilet Thoklakpagi Du'a</h4>
+            <p class="arabic reveal">
+              الْحَمْدُ لِلَّهِ الَّذِي أَذْهَبَ عَنِّي الْأَذَى وَعَافَانِي
+            </p>
+            <div class="btns reveal">
+              <button class="copy"><i class="fa-regular fa-copy"></i></button>
+              <button class="sound">
+                <i class="fa-solid fa-volume-low"></i>
+              </button>
+            </div>
+            <p class="meaning reveal">
+              <i></i> "Ya Allah ! Eina nahaknonda ngakpinaba haijari,
+              thagatchariba khudingmk Allahkhktagini, Mahakna eigi awaba
+              kok-hnbire amasung eibu nungaihnbire".
+            </p>
+          </div>
+        </section>
+
+        <section class="sunnat"></section>
+      </main>
+    </main>
+    <div class="imp">
+      <p>Asoiba yaobro? Yaoragadi cda haaybirk oo --</p>
+      <a href="">Haibiyu</a>
+    </div>
+
+    <footer>
+      <div>
+        <p>&copy;</p>
+        <p>Moinam Ashim</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

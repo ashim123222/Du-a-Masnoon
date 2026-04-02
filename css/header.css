@@ -1,0 +1,221 @@
+header {
+  justify-content: space-between;
+  height: 60px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0px;
+  padding: 0% 5%;
+  backdrop-filter: blur(20px);
+  z-index: 99999999;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.bar {
+  width: 18px;
+  height: 0.25vh;
+  background: var(--text-pri);
+}
+.menu.active {
+  transform: rotate(90deg);
+}
+.menu.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+}
+header svg,
+.menu {
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+  margin-top: 5px;
+  background: var(--bg-sec);
+  border-radius: 50%;
+  cursor: pointer;
+  /* border: 1px solid var(--border); */
+}
+svg:hover,
+.menu:hover,
+button:hover {
+  background: var(--bg-sec-sec);
+}
+header > * {
+  gap: var(--gap);
+}
+header input {
+  padding: 9px 15px;
+  border-radius: 30px;
+  border: 1px solid var(--border);
+  width: 30vw;
+}
+header input:focus {
+  outline: none;
+  border: 1px solid var(--text-pri);
+}
+header div:nth-child(3) a {
+  padding: 9px 15px;
+  background: var(--text-pri);
+  color: var(--bg-color);
+  border-radius: 30px;
+}
+.mode-change:active {
+  transform: rotate(45deg) scale(0.8);
+}
+
+/* ============= SEARCH RESULTS STYLING ================ */
+.search-container {
+  position: relative;
+  flex: 1;
+  width: 30vw;
+  min-width: 300px;
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+  /* margin-left: 10px; */
+  z-index: 99999;
+}
+
+#search-results {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+  display: none;
+  z-index: 9999;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+body.dark #search-results {
+  background: rgba(15, 15, 15, 0.85);
+}
+
+#search-results a {
+  display: block;
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  color: var(--text-pri);
+  border-radius: var(--sm-brdr-rad);
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#search-results a:last-child {
+  border-bottom: none;
+}
+
+#search-results a:hover {
+  background: var(--bg-sec);
+  padding-left: 18px;
+}
+
+#search-results a:active {
+  background: var(--bg-sec-sec);
+  transform: scale(0.98);
+}
+
+#search-results a:focus {
+  outline: 2px solid var(--text-pri);
+  outline-offset: -2px;
+}
+
+/* ============= RESPONSIVE SEARCH (< 750px) ================ */
+@media (max-width: 750px) {
+  .hide {
+    opacity: 0;
+    width: 0px;
+  }
+  .search-container {
+    min-width: 0px;
+    margin-left: 10px;
+  }
+  header input {
+    width: 0;
+    padding: 0;
+    border: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  header input.expanded {
+    width: 70vw;
+    padding: 9px 15px;
+    opacity: 1;
+    pointer-events: auto;
+    border: 1px solid var(--border);
+  }
+
+  #search-results {
+    width: 100%;
+    right: auto;
+    left: -5px;
+    max-width: calc(100vw - 30px);
+  }
+}
+
+@media (max-width: 600px) {
+  .disp {
+    opacity: 0;
+    width: 0px;
+    transform: scale(0);
+    display: none;
+  }
+  .logo {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    padding: 0 10px;
+  }
+  .sidebar {
+    width: 100% !important;
+  }
+  .search-container {
+    margin-right: 5px;
+    margin-left: 10px;
+  }
+  .search-container input {
+    max-width: 85%;
+    transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  p.meaning {
+    letter-spacing: 1px;
+  }
+  p.dua {
+    text-align: right;
+  }
+  .contact {
+    background: var(--bg-sec) !important;
+    color: var(--text-pri) !important;
+  }
+  
+}
